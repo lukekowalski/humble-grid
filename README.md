@@ -195,6 +195,14 @@ grid--gap-tiny, grid--gap-huge
 grid--gap-tiny@medium, grid--gap-huge@medium [for default breakpoint values]
 ```
 
+Example
+```html
+<div class="grid grid--gap-tiny grid--gap-huge@medium">
+  <div class="grid__cell grid__cell--6"></div>
+  <div class="grid__cell grid__cell--6"></div>
+</div>
+```
+
 ### auto-fit
 
 Add any number of columns to your container and grid will figure out how to place them in a best possible way.
@@ -219,7 +227,7 @@ Above sample will create set of classes that you can use on various breakpoints:
 Example:
 
 ```html
-<div class="grid grid--auto-fit-xs grid--auto-fit-xs@medium">
+<div class="grid grid--auto-fit-xs grid--auto-fit-s@medium">
   <div></div>
   <div></div>
   <div></div>
