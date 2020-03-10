@@ -1,0 +1,25 @@
+@if index($grid-extensions, 'grid-gap') {
+  .grid--gap {
+    grid-gap: map-get($grid-gaps, 'default');
+  }
+
+  @each $type, $size in $grid-gaps {
+    @if $type != default {
+      .grid--gap-#{$type} {
+        grid-gap: $size;
+      }
+    }
+  }
+
+  @each $key, $value in $grid-breakpoints {
+    @include breakpoint($key) {
+      @each $type, $size in $grid-gaps {
+        @if $type != default {
+          .grid--gap-#{$type}\@#{$key} {
+            grid-gap: $size;
+          }
+        }
+      }
+    }
+  }
+}
