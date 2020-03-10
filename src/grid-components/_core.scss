@@ -1,0 +1,44 @@
+// ----------------------------------------
+// Grid
+// ----------------------------------------
+.grid {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+}
+
+// ----------------------------------------
+// Container
+// ----------------------------------------
+.grid__container {
+  position: relative;
+  width: 100%;
+  max-width: $grid-container;
+  box-sizing: border-box; // we don't want the padding to be included in container width
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// ----------------------------------------
+// Cell
+// ----------------------------------------
+.grid__cell {
+  grid-column: span $grid-columns / span $grid-columns;
+}
+
+@for $i from 1 through $grid-columns {
+  .grid__cell--#{$i} {
+    grid-column: span #{$i} / span #{$i};
+  }
+}
+
+@each $key, $value in $grid-breakpoints {
+  @include breakpoint($key) {
+    @for $i from 1 through $grid-columns {
+      .grid__cell--#{$i}\@#{$key} {
+        grid-column: span #{$i} / span #{$i};
+      }
+    }
+  }
+}
