@@ -1,0 +1,27 @@
+$grid-container: 1200px !default;
+$grid-columns: 12 !default;
+
+$grid-extensions: () !default;
+// 'offset', 'grid-gap', 'auto-fit'
+
+$grid-breakpoints: (
+  medium: 64em,
+) !default;
+
+$grid-gaps: (
+  default: 1rem,
+) !default;
+
+$grid-auto-fit-cols: (
+  xs: 1rem,
+) !default;
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: map-get($grid-breakpoints,$breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint not defined: #{$breakpoint}";
+  }
+}
