@@ -1,0 +1,25 @@
+@if index($grid-extensions, 'offset') {
+  @for $i from 1 through $grid-columns {
+    .grid__cell--start-#{$i} {
+      grid-column-start: $i;
+    }
+
+    .grid__cell--end-#{$i} {
+      grid-column-end: $i;
+    }
+  }
+
+  @each $key, $value in $grid-breakpoints {
+    @include breakpoint($key) {
+      @for $i from 1 through $grid-columns {
+        .grid__cell--start-#{$i}\@#{$key} {
+          grid-column-start: $i;
+        }
+
+        .grid__cell--end-#{$i}\@#{$key} {
+          grid-column-end: $i;
+        }
+      }
+    }
+  }
+}
