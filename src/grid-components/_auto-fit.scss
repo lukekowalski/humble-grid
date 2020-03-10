@@ -1,0 +1,21 @@
+@if index($grid-extensions, 'auto-fit') {
+  .grid--auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+
+  @each $name, $min-size in $grid-auto-fit-cols {
+    .grid--auto-fit-#{$name} {
+      grid-template-columns: repeat(auto-fit, minmax(#{$min-size}, 1fr));
+    }
+  }
+
+  @each $key, $value in $grid-breakpoints {
+    @include breakpoint($key) {
+      @each $name, $min-size in $grid-auto-fit-cols {
+        .grid--auto-fit-#{$name}\@#{$key} {
+          grid-template-columns: repeat(auto-fit, minmax(#{$min-size}, 1fr));
+        }
+      }
+    }
+  }
+}
