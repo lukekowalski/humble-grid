@@ -31,14 +31,13 @@ or
 yarn add humble-grid
 ```
 
-2. Import the grid into your SCSS file
+2. Customise the config (Remember to put your custom settings [before the '@import' part](https://medium.com/@bajena3/a-story-about-overriding-scss-variables-and-the-default-keyword-eace1de34631))
+
+3. Import the grid into your SCSS file
 
 ```scss
 @import 'path/to/your/node/modules/humble-grid/humble-grid.scss';
 ```
-
-3. Customise it!
-
 
 ## Core
 
