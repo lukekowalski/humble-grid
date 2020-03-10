@@ -121,10 +121,10 @@ Example setup for a complex project could look like this:
 ```scss
 $grid-breakpoints: (
   tiny: 35.5em, // ~ 568px
-    small: 48em, // ~ 768px
-    medium: 64em, // ~ 1024px
-    large: 80em, // ~ 1280px
-    huge: 90em, // ~ 1440px
+  small: 48em, // ~ 768px
+  medium: 64em, // ~ 1024px
+  large: 80em, // ~ 1280px
+  huge: 90em, // ~ 1440px
 );
 ```
 
@@ -220,9 +220,10 @@ Example:
 
 ```html
 <div class="grid grid--auto-fit-xs grid--auto-fit-xs@medium">
-  <div class="grid__cell"></div>
-  <div class="grid__cell"></div>
-  <div class="grid__cell"></div>
-  <div class="grid__cell"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 ```
