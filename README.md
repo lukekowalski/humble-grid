@@ -15,8 +15,9 @@ Main features:
 ⏱️ Set up in less than no time
 
 ## Demo
+1. [Basic grid example](https://codepen.io/lukekowalski/pen/VwLyJym)
 
-Demo is coming soon.
+More demo content coming soon.
 
 
 ## Getting started
