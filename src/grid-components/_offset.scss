@@ -1,4 +1,8 @@
 @if index($grid-extensions, 'offset') {
+  .grid__cell--end {
+    grid-column-end: -1;
+  }
+
   @for $i from 1 through $grid-columns {
     .grid__cell--start-#{$i} {
       grid-column-start: $i;
@@ -11,6 +15,10 @@
 
   @each $key, $value in $grid-breakpoints {
     @include breakpoint($key) {
+      .grid__cell--end\@#{$key} {
+        grid-column-end: -1;
+      }
+
       @for $i from 1 through $grid-columns {
         .grid__cell--start-#{$i}\@#{$key} {
           grid-column-start: $i;
