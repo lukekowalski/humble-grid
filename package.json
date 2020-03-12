@@ -1,6 +1,6 @@
 {
   "name": "humble-grid",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "humble-grid.scss",
   "keywords": [
@@ -10,8 +10,8 @@
     "BEM"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/lukekowalski/humble-grid"
+    "type": "git",
+    "url": "https://github.com/lukekowalski/humble-grid"
   },
   "scripts": {
     "start": "node build"
