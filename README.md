@@ -16,6 +16,9 @@ Main features:
 
 ## Demo
 1. [Basic grid example](https://codepen.io/lukekowalski/pen/VwLyJym)
+2. [Grid Offset](https://codepen.io/lukekowalski/pen/jOPZjwz)
+3. [Grid gaps](https://codepen.io/lukekowalski/pen/oNXEKjB)
+4. [Grid with auto-size columns](https://codepen.io/lukekowalski/pen/MWwQNyM)
 
 More demo content coming soon.
 
