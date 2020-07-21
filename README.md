@@ -238,3 +238,5 @@ Example:
   <div></div>
 </div>
 ```
+## Used by:
+- [Humble Themes](https://humblethemes.com)
